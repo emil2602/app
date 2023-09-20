@@ -1,0 +1,24 @@
+@import './variables/global.scss';
+@import './themes/dark.scss';
+@import './themes//light.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  font: var(--font-l);
+  background: var(--bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.content {
+  padding: 20px;
+}
