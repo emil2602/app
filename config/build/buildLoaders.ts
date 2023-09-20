@@ -1,21 +1,20 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import webpack from 'webpack';
-import { BuildOptions } from './types/config';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import type webpack from 'webpack'
+import { type BuildOptions } from './types/config'
 
-
-export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
   return [
     {
       test: /\.tsx?$/,
       use: 'ts-loader',
-      exclude: /node_modules/,
+      exclude: /node_modules/
     },
     {
       test: /\.s[ac]ss$/i,
       use: [
         options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
         {
-          loader: "css-loader",
+          loader: 'css-loader',
           options: {
             modules: {
               auto: (resPath: string) => Boolean(resPath?.includes('.module.')),
@@ -23,20 +22,20 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
             }
           }
         },
-        "sass-loader",
-      ],
+        'sass-loader'
+      ]
     },
     {
       test: /\.svg$/,
-      use: ['@svgr/webpack'],
+      use: ['@svgr/webpack']
     },
     {
       test: /\.(png|jpe?g|gif)$/i,
       use: [
         {
-          loader: 'file-loader',
-        },
-      ],
-    },
+          loader: 'file-loader'
+        }
+      ]
+    }
   ]
 }

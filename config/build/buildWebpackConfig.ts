@@ -1,18 +1,17 @@
-import webpack from "webpack";
-import path from "path";
+import type webpack from 'webpack'
 
-import { BuildOptions } from "./types/config";
+import { type BuildOptions } from './types/config'
 
-import { buildPlugins } from "./buildPlugins";
-import { buildLoaders } from "./buildLoaders";
-import { builResolvers } from "./buildResolers";
-import { buildDevServer } from "./buildDevServer";
+import { buildPlugins } from './buildPlugins'
+import { buildLoaders } from './buildLoaders'
+import { builResolvers } from './buildResolers'
+import { buildDevServer } from './buildDevServer'
 
-export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
-  const { mode, paths, isDev } = options;
+export function buildWebpackConfig (options: BuildOptions): webpack.Configuration {
+  const { mode, paths, isDev } = options
 
   return {
-    mode: mode,
+    mode,
     entry: paths.entry,
     output: {
       filename: '[name].[contenthash].js',

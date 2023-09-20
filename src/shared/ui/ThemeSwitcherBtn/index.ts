@@ -1,4 +1,4 @@
-import ThemeSwitcherBtn from "./ui/ThemeSwitcherBtn";
+import ThemeSwitcherBtn from './ui/ThemeSwitcherBtn'
 
 export {
   ThemeSwitcherBtn

@@ -1,29 +1,29 @@
 import React, { useState } from 'react'
 
-import { classNames } from 'helpers/classNames/classNames';
+import { classNames } from 'helpers/classNames/classNames'
 
-import cls from './Sidebar.module.scss';
-import Button from 'shared/ui/Button/ui/Button';
-import { ThemeSwitcherBtn } from 'shared/ui/ThemeSwitcherBtn';
+import cls from './Sidebar.module.scss'
+import Button from 'shared/ui/Button/ui/Button'
+import { ThemeSwitcherBtn } from 'shared/ui/ThemeSwitcherBtn'
 
 interface SidebarProps {
   className?: string
 }
 
-const Sidebar = ({className}: SidebarProps) => {
-  const [isColapsed, setIsCollapsed] = useState(false);
+const Sidebar = ({ className }: SidebarProps): JSX.Element => {
+  const [isColapsed, setIsCollapsed] = useState(false)
 
-  const onToggle = () => {
-    setIsCollapsed((prevState) => !prevState);
-  };
+  const onToggle = (): void => {
+    setIsCollapsed((prevState) => !prevState)
+  }
 
   return (
-    <div
-      className={classNames(cls.Sidebar, {[cls.collapsed]: isColapsed}, [className])}
+      <div
+      className={classNames(cls.Sidebar, { [cls.collapsed]: isColapsed }, [className])}
     >
-      <Button onClick={onToggle}>Toggle</Button>
-      <ThemeSwitcherBtn/>
-    </div>
+          <Button onClick={onToggle}>Toggle</Button>
+          <ThemeSwitcherBtn/>
+      </div>
   )
 }
 

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { type FC } from 'react'
 
-const AboutPage = () => {
+const AboutPage: FC = () => {
   return (
-    <div>AboutPage</div>
+      <div>AboutPage</div>
   )
 }
 

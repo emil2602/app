@@ -2,23 +2,23 @@ import React, { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { routeConfig } from 'shared/config/routeConfig/routeConfig'
 
-const AppRouter = () => {
+const AppRouter = (): JSX.Element => {
   return (
-  <Suspense fallback={<div>Loading...</div>}>
-    <Routes>
-      {Object.values(routeConfig).map(({element, path}) => (
-        <Route
+      <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+              {Object.values(routeConfig).map(({ element, path }) => (
+                  <Route
           key={path}
           path={path}
           element={(
-            <div className='content'>
-              {element}
-            </div>
+              <div className='content'>
+                  {element}
+              </div>
           )}
         />
-      ))}
-    </Routes>
-  </Suspense>
+              ))}
+          </Routes>
+      </Suspense>
   )
 }
 
