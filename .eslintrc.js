@@ -37,6 +37,7 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     'react/react-in-jsx-scope': 'off',
-    'react/no-deprecated': 'warn'
+    'react/no-deprecated': 'warn',
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }
