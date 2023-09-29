@@ -19,9 +19,10 @@ const Sidebar = ({ className }: SidebarProps): JSX.Element => {
 
   return (
       <div
-      className={classNames(cls.Sidebar, { [cls.collapsed]: isColapsed }, [className])}
+        data-testid='sidebar'
+        className={classNames(cls.Sidebar, { [cls.collapsed]: isColapsed }, [className])}
     >
-          <Button onClick={onToggle}>Toggle</Button>
+          <Button data-testid='sidebar-toggle' onClick={onToggle}>Toggle</Button>
           <ThemeSwitcherBtn/>
       </div>
   )
