@@ -11,7 +11,8 @@
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "test": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -c ./config/.storybook",
-    "build-storybook": "storybook build -с ./config/.storybook"
+    "build-storybook": "storybook build -с ./config/.storybook",
+    "start:dev:server": "node ./json-server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -52,6 +53,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "json-server": "^0.17.4",
     "mini-css-extract-plugin": "^2.7.6",
     "regenerator-runtime": "^0.14.0",
     "sass": "^1.63.5",
